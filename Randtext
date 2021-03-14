@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+#include <ctype.h>
+#include <stdio.h>
+
+int main(){
+    srand(time(NULL));
+    char msg[100];
+    int a;
+    std::cout<< "insert text"<< std::endl;
+    gets(msg);
+    for(int i=0; i<strlen(msg); i++){
+        a=rand()%2;
+        if(a==0)
+            msg[i]==msg[i];
+        if(a==1)
+            msg[i]=toupper(msg[i]);
+    }
+    std::cout<< msg;
+}
